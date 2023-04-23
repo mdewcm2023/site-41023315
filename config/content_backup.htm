@@ -1,11 +1,87 @@
 <h1>關於</h1>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">倉庫：</span></span><a href="https://github.com/mdewcm2023/site-41023315"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://github.com/mdewcm2023/site-41023315</span></span></a></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">網站：<span>:<a href="https://mdewcm2023.github.io/site-41023315">https://mdewcm2023.github.io/site-41023315</a></span></span></span></p>
-<h1><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>w9</span></span></span></h1>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span></span></span></span></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span></span></span></span></p><h1>權限</h1>
+<h1>Bing</h1>
+<p><span>建議採取的程式內容為:</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document
+brython_div = document["brython_div"]
+# Example data for five tests
+url1 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt"
+url2 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6.txt"
+url3 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6-2.txt"
+url4 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/075c06b2baf1bb07665f1a98e9f88f7e81ebe1a4/1aw8.txt"
+url5 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw9.txt"
+ 
+'''
+test1 = ["12345:80", "67890:70"]
+test2 = ["12345:85", "67890:75"]
+test3 = ["12345:90", "67890:80"]
+test4 = ["12345:95", "67890:85"]
+test5 = ["12345:100", "67890:90"]
+'''
+test1 = open(url1).read().split("\n")[1:]
+test2 = open(url2).read().split("\n")[1:]
+test3 = open(url3).read().split("\n")[1:]
+test4 = open(url4).read().split("\n")[1:]
+test5 = open(url5).read().split("\n")[1:]
+ 
+ 
+# Create a dictionary to store the student numbers and their test scores
+student_scores = {}
+  
+# Iterate over the data for each test
+for test_data in [test1, test2, test3, test4, test5]:
+    # Iterate over the data for this test
+    for item in test_data:
+        # Split the item into its components
+        student_number, score = item.split(":")
+          
+        # Convert the score to an integer
+        try:
+            score = int(score)
+        except:
+            score = 0
+          
+        # Add the score to the list of scores for this student
+        if student_number not in student_scores:
+            student_scores[student_number] = []
+        student_scores[student_number].append(score)
+  
+# Calculate the average score for each student
+for student_number, scores in student_scores.items():
+    average_score = int(sum(scores) / len(scores))
+    #print(f"Student {student_number} has an average score of {average_score}")
+    brython_div &lt;= student_number
+    brython_div &lt;= ":"
+    brython_div &lt;= average_score
+    brython_div &lt;= html.BR()
+ 
+brython_div &lt;= data</pre>
+<div class="line number1 index0 alt2"><code class="py keyword"><span>40723224</span><span>:</span><span>57</span><br/><span>40823116</span><span>:</span><span>81</span><br/><span>40823128</span><span>:</span><span>0</span><br/><span>40823139</span><span>:</span><span>17</span><br/><span>40823152</span><span>:</span><span>74</span><br/><span>40823153</span><span>:</span><span>92</span><br/><span>40823218</span><span>:</span><span>45</span><br/><span>40823246</span><span>:</span><span>42</span><br/><span>40828213</span><span>:</span><span>44</span><br/><span>40828236</span><span>:</span><span>0</span><br/><span>40828237</span><span>:</span><span>0</span><br/><span>40828242</span><span>:</span><span>0</span><br/><span>40828244</span><span>:</span><span>0</span><br/><span>40840167</span><span>:</span><span>0</span><br/><span>40871106</span><span>:</span><span>0</span><br/><span>41023301</span><span>:</span><span>67</span><br/><span>41023302</span><span>:</span><span>38</span><br/><span>41023305</span><span>:</span><span>43</span><br/><span>41023306</span><span>:</span><span>66</span><br/><span>41023307</span><span>:</span><span>85</span><br/><span>41023308</span><span>:</span><span>50</span><br/><span>41023309</span><span>:</span><span>69</span><br/><span>41023310</span><span>:</span><span>32</span><br/><span>41023311</span><span>:</span><span>80</span><br/><span>41023312</span><span>:</span><span>72</span><br/><span>41023314</span><span>:</span><span>52</span><br/><span>41023315</span><span>:</span><span>83</span><br/><span>41023316</span><span>:</span><span>76</span><br/><span>41023317</span><span>:</span><span>76</span><br/><span>41023318</span><span>:</span><span>0</span><br/><span>41123101</span><span>:</span><span>82</span><br/><span>41123102</span><span>:</span><span>75</span><br/><span>41123103</span><span>:</span><span>0</span><br/><span>41123107</span><span>:</span><span>62</span><br/><span>41123112</span><span>:</span><span>0</span><br/><span>41123116</span><span>:</span><span>58</span><br/><span>41123118</span><span>:</span><span>48</span><br/><span>41123120</span><span>:</span><span>0</span><br/><span>41123121</span><span>:</span><span>55</span><br/><span>41123122</span><span>:</span><span>89</span><br/><span>41123124</span><span>:</span><span>67</span><br/><span>41123125</span><span>:</span><span>0</span><br/><span>41123129</span><span>:</span><span>78</span><br/><span>41123131</span><span>:</span><span>72</span><br/><span>41123132</span><span>:</span><span>66</span><br/><span>41123133</span><span>:</span><span>54</span><br/><span>41123134</span><span>:</span><span>38</span><br/><span>41123135</span><span>:</span><span>88</span><br/><span>41123136</span><span>:</span><span>32</span><br/><span>41123137</span><span>:</span><span>76</span><br/><span>41123139</span><span>:</span><span>88</span><br/><span>41123140</span><span>:</span><span>68</span><br/><span>41123141</span><span>:</span><span>50</span><br/><span>41123142</span><span>:</span><span>68</span><br/><span>41123143</span><span>:</span><span>59</span><br/><span>41123144</span><span>:</span><span>75</span><br/><span>41123145</span><span>:</span><span>42</span><br/><span>41123146</span><span>:</span><span>0</span><br/><span>41123148</span><span>:</span><span>66</span><br/><span>41123149</span><span>:</span><span>88</span><br/><span>41123150</span><span>:</span><span>69</span><br/><span>41123152</span><span>:</span><span>0</span></code></div>
+<div class="line number53 index52 alt2"></div><h1>w9</h1>
+<p>利用 Bython 讀取 url 中的資料:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">url = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt"
+data = open(url).read().split("\n")
+data = (data[1:])
+for i in data:
+    #print(i)
+    stud = i.split(":")[0]
+    score = i.split(":")[1]
+    print(stud,score)</pre>
+<p><br/><br/><br/></p><h1>權限</h1>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">近端倉儲的設定檔案:倉儲目錄下 .git 中的 config, 代表倉儲的 configuration file (設定檔案)</span></span></p>
-<h1>提交</h1>
+<h1>資料結構</h1>
+<p>從<a href="https://mdewcm2023.github.io/site-41023315/content/w9.html">https://mdewcm2023.github.io/site-41023315/content/w9.html</a>可以知道, 若已知資料所在網路連結:</p>
+<div>
+<div><a href="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt">1aw5.txt</a></div>
+<div><a href="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6.txt">1aw6.txt</a></div>
+<div><a href="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6-2.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6-2.txt">1aw6-2.txt</a></div>
+<div><a href="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/075c06b2baf1bb07665f1a98e9f88f7e81ebe1a4/1aw8.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/075c06b2baf1bb07665f1a98e9f88f7e81ebe1a4/1aw8.txt">1aw8.txt</a></div>
+<div><a href="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw9.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw9.txt">1aw9.txt</a>,</div>
+<div></div>
+<div>分別讀取各次考試的成績, 其中利用了 list (數列), 但每次讀取後, 若無法將各學員的成績累加後求取平均, 則無法列出各學員的期中成績.</div>
+<div>假如利用 dict (字典), 將學號與成績總分作對應, 就有機會列出{"學號": "成績總分", "學號": "成績總分",......}</div>
+</div><h1>提交</h1>
 <p>commit</p>
 <p>git commit -m</p>
 <p>message</p>
